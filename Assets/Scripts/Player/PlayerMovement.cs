@@ -6,8 +6,10 @@ using UnityEngine.Animations;
 public class Movement : MonoBehaviour {
     private Rigidbody2D rb;
     public float speed = 10f;
+    public float maxVelocity = 10f;
     public float jumpForce = 300f;
     public bool canJump = true;
+    public ParticleSystem dust;
     
     void Start() {
         rb = GetComponent<Rigidbody2D>();
@@ -15,9 +17,25 @@ public class Movement : MonoBehaviour {
 
     void Update() {
         float xAxis = Input.GetAxis("Horizontal");
-        Vector2 move = new(xAxis, 0);
+        float yAxis = rb.velocity.y;
+        Vector2 move = new Vector2(xAxis * speed, yAxis);
         
-        transform.Translate(move * speed * Time.deltaTime);
+        rb.velocity += new Vector2(move.x * Time.deltaTime, 0);
+        rb.velocity = new Vector2(Mathf.Clamp(rb.velocity.x, -maxVelocity, maxVelocity), rb.velocity.y);
+        
+        if(xAxis == 0 || yAxis != 0) {
+            dust.Stop();
+        } else if(xAxis < 0 && yAxis == 0) {
+            if(dust.isStopped){
+                dust.Play();
+            }
+            dust.transform.rotation = new Quaternion(0, 0, 0, 0);
+        } else if(xAxis > 0 && yAxis == 0) {
+            if(dust.isStopped){
+                dust.Play();
+            }
+            dust.transform.rotation = new Quaternion(0, 180, 0, 0);
+        }
 
         if(Input.GetKeyDown(KeyCode.Space) & canJump)
         {
@@ -30,7 +48,6 @@ public class Movement : MonoBehaviour {
 
         
     private void OnTriggerEnter2D(Collider2D other){
-        print("Collided with " + other.gameObject.name);
         if(other.gameObject.CompareTag("Ground")) { // turns out using "==" is not the best way to compare tags
             canJump = true;
             speed = 10f;
