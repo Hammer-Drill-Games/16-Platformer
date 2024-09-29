@@ -9,33 +9,53 @@ public class Movement : MonoBehaviour {
     public float maxVelocity = 10f;
     public float jumpForce = 300f;
     public bool canJump = true;
-    public ParticleSystem dust;
+    private ParticleSystem dust;
+    private Animator animator;
+    private SpriteRenderer spriteRenderer;
+    private AudioSource jump;
     
     void Start() {
-        rb = GetComponent<Rigidbody2D>();
+        rb = gameObject.GetComponent<Rigidbody2D>();
+        animator = gameObject.GetComponent<Animator>();
+        spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
+        dust = gameObject.GetComponentInChildren<ParticleSystem>();
+        jump = gameObject.GetComponent<AudioSource>();
     }
 
     void Update() {
         float xAxis = Input.GetAxis("Horizontal");
         float yAxis = rb.velocity.y;
-        Vector2 move = new Vector2(xAxis * speed, yAxis);
         
-        rb.velocity += new Vector2(move.x * Time.deltaTime, 0);
-        rb.velocity = new Vector2(Mathf.Clamp(rb.velocity.x, -maxVelocity, maxVelocity), rb.velocity.y);
-        
-        if(xAxis == 0 || yAxis != 0) {
+        rb.velocity += new Vector2(xAxis * speed * Time.deltaTime, 0);
+        rb.velocity = new Vector2(Mathf.Clamp(rb.velocity.x, -maxVelocity, maxVelocity), yAxis);
+
+        if (xAxis < 0)
+        {
+            spriteRenderer.flipX = true;
+        }
+        else if (xAxis > 0)
+        {
+            spriteRenderer.flipX = false;
+        }
+
+        if(xAxis == 0 || !canJump) {
             dust.Stop();
-        } else if(xAxis < 0 && yAxis == 0) {
+            animator.SetBool("isWalking", false);
+        } else if(xAxis < 0 && canJump) {
             if(dust.isStopped){
                 dust.Play();
             }
+            animator.SetBool("isWalking", true);
             dust.transform.rotation = new Quaternion(0, 0, 0, 0);
-        } else if(xAxis > 0 && yAxis == 0) {
+        } else if(xAxis > 0 && canJump) {
             if(dust.isStopped){
                 dust.Play();
             }
+            animator.SetBool("isWalking", true);
             dust.transform.rotation = new Quaternion(0, 180, 0, 0);
         }
+
+        // originally used yAxis to check if in air but upon collision with objects, the yAxis gets bugged
 
         if(Input.GetKeyDown(KeyCode.Space) & canJump)
         {
@@ -43,12 +63,13 @@ public class Movement : MonoBehaviour {
             rb.AddForce(Vector2.up * jumpForce);
             speed = 6f;
             canJump = false;
+            jump.Play();
         }
     }
 
         
     private void OnTriggerEnter2D(Collider2D other){
-        if(other.gameObject.CompareTag("Ground")) { // turns out using "==" is not the best way to compare tags
+        if(other.gameObject.CompareTag("Ground") || other.gameObject.CompareTag("Cube")) { // turns out using "==" is not the best way to compare tags
             canJump = true;
             speed = 10f;
         }
