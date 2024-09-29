@@ -69,7 +69,7 @@ public class Movement : MonoBehaviour {
 
         
     private void OnTriggerEnter2D(Collider2D other){
-        if(other.gameObject.CompareTag("Ground") || other.gameObject.CompareTag("Cube")) { // turns out using "==" is not the best way to compare tags
+        if(other.gameObject.CompareTag("Ground") || other.gameObject.tag.StartsWith("Cube")) { // turns out using "==" is not the best way to compare tags
             canJump = true;
             speed = 10f;
         }

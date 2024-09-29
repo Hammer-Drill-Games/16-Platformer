@@ -5,7 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - Ground
-  - Cube
+  - Cube2
+  - Cube4
+  - Cube16
+  - Cube8
   layers:
   - Default
   - TransparentFX

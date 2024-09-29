@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 30e85894b3398e84dacf9f3bd80a4096
+guid: 8b1a8573d89c1404bb049f5e800e78e9
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -20,11 +20,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
-  ignoreMasterTextureLimit: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -47,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 16
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -63,6 +64,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
   cookieLightType: 0
   platformSettings:
   - serializedVersion: 3
@@ -75,6 +77,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -87,6 +90,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -99,6 +103,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -111,187 +116,243 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: tilemap_0
+      name: turuncuherif_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 32
-        width: 16
+        x: 10
+        y: 135
+        width: 12
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 284f9f020408213429c56418cbb4f95c
-      internalID: -1488115140
+      spriteID: a4d968833b9640143bb273e96d2e1aa8
+      internalID: 256193760
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tilemap_1
+      name: turuncuherif_1
       rect:
         serializedVersion: 2
-        x: 16
-        y: 32
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 42
+        y: 135
+        width: 12
+        height: 15
+      alignment: 9
+      pivot: {x: 0.5012954, y: 0.5688629}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 81aeaff515f71da41b212384b527be49
-      internalID: 1328697679
+      spriteID: 8d6fd9d26ed7e2446910d4b93d2dd665
+      internalID: -1972082685
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tilemap_2
+      name: turuncuherif_2
       rect:
         serializedVersion: 2
-        x: 32
-        y: 32
-        width: 16
+        x: 74
+        y: 135
+        width: 12
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b1ca0c42bb863af469c4be565dfc77d5
-      internalID: -748945841
+      spriteID: 6bec09710b17ce94f8a42741223da917
+      internalID: 1727108807
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tilemap_3
+      name: turuncuherif_3
       rect:
         serializedVersion: 2
-        x: 0
-        y: 16
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 106
+        y: 135
+        width: 12
+        height: 15
+      alignment: 9
+      pivot: {x: 0.49736342, y: 0.5646525}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dc7d06406ab69574e9bf0215805d0941
-      internalID: 285060081
+      spriteID: d8572b3bd85b6b442aa8c64763e9e62c
+      internalID: -2028961848
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tilemap_4
+      name: turuncuherif_4
       rect:
         serializedVersion: 2
-        x: 16
-        y: 16
-        width: 16
+        x: 138
+        y: 135
+        width: 12
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b4cf34d944d4d26479c263c58fcfc6c9
-      internalID: -446630592
+      spriteID: c75ceaa372a997943ae1ed51df7fea94
+      internalID: -1381896159
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tilemap_5
+      name: turuncuherif_5
       rect:
         serializedVersion: 2
-        x: 32
-        y: 16
-        width: 16
+        x: 11
+        y: 103
+        width: 11
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 21c17a77c55f8d544ad52275de84a6f9
-      internalID: 1354406719
+      spriteID: 24da4ebf4ee19c24b9a477dfcba9dd5a
+      internalID: 1193355557
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tilemap_6
+      name: turuncuherif_6
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 16
+        x: 43
+        y: 103
+        width: 11
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cb0de1b06d503ac4981e462ca849d070
-      internalID: 1769710933
+      spriteID: 57e668d43149225478327752eeb8b4ca
+      internalID: 627866935
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tilemap_7
+      name: turuncuherif_7
       rect:
         serializedVersion: 2
-        x: 16
-        y: 0
-        width: 16
+        x: 75
+        y: 103
+        width: 11
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4da5f936f4c817a44a2d172bf528aa3c
-      internalID: -1060765712
+      spriteID: 412f021181534a946914ac12483d8d11
+      internalID: -195694026
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tilemap_8
+      name: turuncuherif_8
       rect:
         serializedVersion: 2
-        x: 32
-        y: 0
-        width: 16
+        x: 107
+        y: 103
+        width: 11
         height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c098f1d3698f5c849a32b6a8c411cc2c
+      internalID: -2047115549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: turuncuherif_9
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 72
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8554c2ab996e694abccab204a3b9498
+      internalID: 912263892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: turuncuherif_10
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 134
+        width: 10
+        height: 1
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -299,8 +360,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1eb2b5f7a638ce14b950a48a89ead84d
-      internalID: -1445127336
+      spriteID: 953d71d7844b72f418762c853f755376
+      internalID: 1055292731
       vertices: []
       indices: 
       edges: []
@@ -316,18 +377,19 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      tilemap_0: -1488115140
-      tilemap_1: 1328697679
-      tilemap_2: -748945841
-      tilemap_3: 285060081
-      tilemap_4: -446630592
-      tilemap_5: 1354406719
-      tilemap_6: 1769710933
-      tilemap_7: -1060765712
-      tilemap_8: -1445127336
-  spritePackingTag: 
+      turuncuherif_0: 256193760
+      turuncuherif_1: -1972082685
+      turuncuherif_10: 1055292731
+      turuncuherif_2: 1727108807
+      turuncuherif_3: -2028961848
+      turuncuherif_4: -1381896159
+      turuncuherif_5: 1193355557
+      turuncuherif_6: 627866935
+      turuncuherif_7: -195694026
+      turuncuherif_8: -2047115549
+      turuncuherif_9: 912263892
+  mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 13462eeb958af9442ba8b9f8b3ee3285
+guid: 30e85894b3398e84dacf9f3bd80a4096
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -20,11 +20,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
-  ignoreMasterTextureLimit: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -47,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -63,6 +64,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
   cookieLightType: 0
   platformSettings:
   - serializedVersion: 3
@@ -75,6 +77,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -87,6 +90,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -99,6 +103,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -111,17 +116,31 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Sprite-00022goz_krpma_0
+      name: tilemap_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 144
+        y: 32
         width: 16
         height: 16
       alignment: 0
@@ -131,18 +150,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fb884e192de67274e92b98cc33c5d5f8
-      internalID: 477707876
+      spriteID: 284f9f020408213429c56418cbb4f95c
+      internalID: -1488115140
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite-00022goz_krpma_1
+      name: tilemap_1
       rect:
         serializedVersion: 2
         x: 16
-        y: 144
+        y: 32
         width: 16
         height: 16
       alignment: 0
@@ -152,18 +171,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c55d7d0ce1dabb04ab0d05375655e755
-      internalID: 488608661
+      spriteID: 81aeaff515f71da41b212384b527be49
+      internalID: 1328697679
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite-00022goz_krpma_2
+      name: tilemap_2
       rect:
         serializedVersion: 2
         x: 32
-        y: 144
+        y: 32
         width: 16
         height: 16
       alignment: 0
@@ -173,18 +192,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 91df6e3012a9aca49a4722011b40aec1
-      internalID: -1467099096
+      spriteID: b1ca0c42bb863af469c4be565dfc77d5
+      internalID: -748945841
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite-00022goz_krpma_3
+      name: tilemap_3
       rect:
         serializedVersion: 2
-        x: 48
-        y: 144
+        x: 0
+        y: 16
         width: 16
         height: 16
       alignment: 0
@@ -194,18 +213,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9a2e676ced19f24488a9f8d103c41883
-      internalID: -1208493269
+      spriteID: dc7d06406ab69574e9bf0215805d0941
+      internalID: 285060081
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite-00022goz_krpma_4
+      name: tilemap_4
       rect:
         serializedVersion: 2
-        x: 64
-        y: 144
+        x: 16
+        y: 16
         width: 16
         height: 16
       alignment: 0
@@ -215,35 +234,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6d538d3d86ae01e4ba5d53e652681dfe
-      internalID: -1198295500
+      spriteID: b4cf34d944d4d26479c263c58fcfc6c9
+      internalID: -446630592
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite-00022goz_krpma_5
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 80
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 40ca87dfcd7284e42a32af275ce511b9
-      internalID: -1006334553
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sprite-00022goz_krpma_6
+      name: tilemap_5
       rect:
         serializedVersion: 2
         x: 32
@@ -257,18 +255,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 32a644bc467c1c24b89cf9a2ce74826b
-      internalID: 1972845488
+      spriteID: 21c17a77c55f8d544ad52275de84a6f9
+      internalID: 1354406719
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite-00022goz_krpma_7
+      name: tilemap_6
       rect:
         serializedVersion: 2
-        x: 48
-        y: 16
+        x: 0
+        y: 0
         width: 16
         height: 16
       alignment: 0
@@ -278,98 +276,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2aeed8fee6d8f714884ec320f23686d9
-      internalID: -2019467917
+      spriteID: cb0de1b06d503ac4981e462ca849d070
+      internalID: 1769710933
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite-00022goz_krpma_8
-      rect:
-        serializedVersion: 2
-        x: 80
-        y: 16
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0221fca770599144e89ad5956096dbaf
-      internalID: -1453130889
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sprite-00022goz_krpma_9
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 16
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 753e8423c29cd824cb5ebc464fc7ac0a
-      internalID: -1600267889
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sprite-00022goz_krpma_10
-      rect:
-        serializedVersion: 2
-        x: 112
-        y: 16
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b83dea65b7e3d1845b408b79a775c1c3
-      internalID: -2111304345
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sprite-00022goz_krpma_11
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 16
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4948b9750cbfccd40b90d619486b7356
-      internalID: -1719589008
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sprite-00022goz_krpma_12
+      name: tilemap_7
       rect:
         serializedVersion: 2
         x: 16
@@ -383,14 +297,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 371d503d9819a6d4689edba1a4966d0d
-      internalID: -983999094
+      spriteID: 4da5f936f4c817a44a2d172bf528aa3c
+      internalID: -1060765712
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite-00022goz_krpma_13
+      name: tilemap_8
       rect:
         serializedVersion: 2
         x: 32
@@ -404,29 +318,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6f0fd1f386c3df3448e78d4b9fadaf9e
-      internalID: 1408311595
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sprite-00022goz_krpma_14
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c2950eb4fc6023444b7a2f4c6edf6910
-      internalID: 1946859617
+      spriteID: 1eb2b5f7a638ce14b950a48a89ead84d
+      internalID: -1445127336
       vertices: []
       indices: 
       edges: []
@@ -442,24 +335,17 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Sprite-00022goz_krpma_0: 477707876
-      Sprite-00022goz_krpma_1: 488608661
-      Sprite-00022goz_krpma_10: -2111304345
-      Sprite-00022goz_krpma_11: -1719589008
-      Sprite-00022goz_krpma_12: -983999094
-      Sprite-00022goz_krpma_13: 1408311595
-      Sprite-00022goz_krpma_14: 1946859617
-      Sprite-00022goz_krpma_2: -1467099096
-      Sprite-00022goz_krpma_3: -1208493269
-      Sprite-00022goz_krpma_4: -1198295500
-      Sprite-00022goz_krpma_5: -1006334553
-      Sprite-00022goz_krpma_6: 1972845488
-      Sprite-00022goz_krpma_7: -2019467917
-      Sprite-00022goz_krpma_8: -1453130889
-      Sprite-00022goz_krpma_9: -1600267889
-  spritePackingTag: 
+      tilemap_0: -1488115140
+      tilemap_1: 1328697679
+      tilemap_2: -748945841
+      tilemap_3: 285060081
+      tilemap_4: -446630592
+      tilemap_5: 1354406719
+      tilemap_6: 1769710933
+      tilemap_7: -1060765712
+      tilemap_8: -1445127336
+  mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 
