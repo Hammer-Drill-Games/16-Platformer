@@ -13,12 +13,12 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - test
   - Water
   - UI
-  - 
-  - 
-  - 
+  - bg
+  - bg1
+  - bg2
   - 
   - 
   - 
@@ -43,6 +43,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: test
+    uniqueID: 3030191615
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
