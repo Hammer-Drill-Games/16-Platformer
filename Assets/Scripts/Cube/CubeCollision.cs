@@ -19,7 +19,8 @@ public class CubeCollision : MonoBehaviour {
             contactPoint.y += 1f;
             if(collision.gameObject.CompareTag(gameObject.tag)) {
                 if(collision.gameObject.GetComponent<Rigidbody2D>().velocity.y > gameObject.GetComponent<Rigidbody2D>().velocity.y) {
-                    Instantiate(cube, contactPoint, Quaternion.identity);
+                    GameObject newCube = Instantiate(cube, contactPoint, Quaternion.identity);
+                    newCube.GetComponent<ParticleSystem>().Play();
                 }
                 Destroy(gameObject);
             }
