@@ -9,6 +9,8 @@ TagManager:
   - Cube4
   - Cube16
   - Cube8
+  - key
+  - Door1
   layers:
   - Default
   - TransparentFX

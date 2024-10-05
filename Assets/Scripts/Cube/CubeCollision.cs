@@ -21,6 +21,7 @@ public class CubeCollision : MonoBehaviour {
                 if(collision.gameObject.GetComponent<Rigidbody2D>().velocity.y > gameObject.GetComponent<Rigidbody2D>().velocity.y) {
                     GameObject newCube = Instantiate(cube, contactPoint, Quaternion.identity);
                     newCube.GetComponent<ParticleSystem>().Play();
+                    newCube.GetComponent<AudioSource>().Play();
                 }
                 Destroy(gameObject);
             }

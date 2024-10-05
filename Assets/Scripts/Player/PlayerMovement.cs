@@ -18,7 +18,7 @@ public class Movement : MonoBehaviour {
         rb = gameObject.GetComponent<Rigidbody2D>();
         animator = gameObject.GetComponent<Animator>();
         spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
-        dust = gameObject.GetComponentInChildren<ParticleSystem>();
+        dust = gameObject.GetComponentsInChildren<ParticleSystem>()[1];
         jump = gameObject.GetComponent<AudioSource>();
     }
 
@@ -57,7 +57,7 @@ public class Movement : MonoBehaviour {
 
         // originally used yAxis to check if in air but upon collision with objects, the yAxis gets bugged
 
-        if(Input.GetKeyDown(KeyCode.Space) & canJump)
+        if(Input.GetKeyDown(KeyCode.Space) && canJump && rb.velocity.y < 0.01f && rb.velocity.y > -0.01f)
         {
             // this.gameObject.GetComponent<AudioSource>().Play();
             rb.AddForce(Vector2.up * jumpForce);
