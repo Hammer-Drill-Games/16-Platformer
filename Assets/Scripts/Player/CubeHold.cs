@@ -7,10 +7,11 @@ using UnityEngine.UIElements;
 
 public class CubeHold : MonoBehaviour
 {
-    private GameObject holdedCube;
+    public GameObject holdedCube;
     public Transform point;
     public Transform point2;
     public GameObject cube;
+    public float recieveDistance = 3.3f;
 
     void Start()
     {
@@ -50,17 +51,19 @@ public class CubeHold : MonoBehaviour
     public void CarryFunc(GameObject cubec)
     {
         if (holdedCube == null){
-            gameObject.GetComponent<ParticleSystem>().Play();
-            cubec.GetComponent<AudioSource>().Play();
-            holdedCube = cubec;
-            holdedCube.GetComponent<BoxCollider2D>().isTrigger = true;
-            holdedCube.transform.SetParent(gameObject.transform);
+            if(Vector2.Distance(point.position, cubec.transform.position) <= recieveDistance){
+                gameObject.GetComponent<ParticleSystem>().Play();
+                cubec.GetComponent<AudioSource>().Play();
+                holdedCube = cubec;
+                holdedCube.GetComponent<BoxCollider2D>().isTrigger = true;
+                holdedCube.transform.SetParent(gameObject.transform);
+            }
         }
         else if (holdedCube != null)    
         {
             holdedCube.GetComponent<BoxCollider2D>().isTrigger = false;
             holdedCube.transform.SetParent(null);
-            holdedCube.transform.position = new Vector3(holdedCube.transform.position.x, holdedCube.transform.position.y+2f, 0);
+            holdedCube.transform.position = new Vector3(holdedCube.transform.position.x, holdedCube.transform.position.y+0.8f, 0);
             holdedCube.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
 
             holdedCube = null;
