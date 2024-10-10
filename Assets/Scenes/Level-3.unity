@@ -6848,6 +6848,10 @@ PrefabInstance:
       propertyPath: cube
       value: 
       objectReference: {fileID: 2003437511151729722, guid: bd323e1a877da3247b232099d0961e6a, type: 3}
+    - target: {fileID: 8446856251612336836, guid: 1d66cb52ec50d004780eb97cf5402f1e, type: 3}
+      propertyPath: sceneName
+      value: Level-4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
