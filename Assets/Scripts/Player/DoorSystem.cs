@@ -10,6 +10,8 @@ public class DoorSystem : MonoBehaviour
     public TextMeshProUGUI KeyCountText;
     private AudioSource audioSource;
     public Sprite doorOpen;
+    public bool newSystem = false;
+    public GameObject[] doors;
 
     void Start()
     {
@@ -27,9 +29,16 @@ public class DoorSystem : MonoBehaviour
         KeyCountText.text = KeyCount.ToString();
         audioSource.Play();
         try {
-            GameObject door = GameObject.FindWithTag("Door" + KeyCount.ToString());
-            door.GetComponent<SpriteRenderer>().sprite = doorOpen;
-            door.GetComponent<BoxCollider2D>().enabled = false;
+            if(newSystem){
+                GameObject d = doors[0];
+                d.GetComponent<SpriteRenderer>().sprite = doorOpen;
+                d.GetComponent<BoxCollider2D>().enabled = false;
+                doors = doors[1..];
+            } else {
+                GameObject door = GameObject.FindWithTag("Door" + KeyCount.ToString());
+                door.GetComponent<SpriteRenderer>().sprite = doorOpen;
+                door.GetComponent<BoxCollider2D>().enabled = false;
+            }
         } catch {
             Debug.Log("Door not found");
         }
